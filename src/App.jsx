@@ -3,6 +3,7 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import Aluno from './Aluno'
 
 function App() {
   const [alunos, setAlunos] = useState([])
@@ -18,17 +19,23 @@ function App() {
   return (
     <>
       <section id="center">
-        <input type="text" name="" id="nome" placeholder='Nome do aluno'/>
-        <input type="number" name="" id="idade"  placeholder='Idade do aluno'/>
-        <input type="text" name="" id="curso"  placeholder='Curso do aluno'/>
-        <input type="text" name="" id="turno"  placeholder='Turno do aluno'/>
-        <input type="button" value="Salvar" onClick={salvarAluno}/>
+        <input type="text" name="" id="nome" placeholder='Nome do aluno' />
+        <input type="number" name="" id="idade" placeholder='Idade do aluno' />
+        <input type="text" name="" id="curso" placeholder='Curso do aluno' />
+        <input type="text" name="" id="turno" placeholder='Turno do aluno' />
+        <input type="button" value="Salvar" onClick={salvarAluno} />
+
+        {/* {
+          alunos.map(
+            (aluno, index) => (
+              <Aluno key={index} nome={aluno.nome} idade={aluno.idade} curso={aluno.curso} turno={aluno.turno} />
+            )
+          )
+        } */}
       </section>
-      <ul>
-      {alunos.map((aluno, index) => (
-        <li key={index}>{aluno.nome}</li>
-      ))}
-    </ul>
+
+
+
 
     </>
   )
